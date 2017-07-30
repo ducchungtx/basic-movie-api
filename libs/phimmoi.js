@@ -33,10 +33,10 @@ class Phimmoi {
                     */
                     (cb) => {
                         let count = 0;
-                        _.each(listMovies, async (movieItem) => {
+                        _.each(listMovies, (movieItem) => {
                             try {
                                 console.log(movieItem.attribs.href);
-                                let movieData = await this.crawlDetailMovie(movieItem.attribs.href);
+                                let movieData = this.crawlDetailMovie(movieItem.attribs.href);
                                 Object.assign(movieData, { link: movieItem.attribs.href });
                                 MovieLinks.push(movieData);
                                 if (count === listMovies.length - 1) {
