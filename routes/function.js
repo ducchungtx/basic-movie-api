@@ -23,7 +23,7 @@ class CrawlerFunc {
         phimmoi.crawlPhimMoi(callback);
     }
 
-    static crawlerTheLoai (url) {
+    static async crawlerTheLoai (url) {
         try {
             const phimmoi = new Phimmoi();
             return phimmoi.crawlPhimMoiTheLoai(url);
